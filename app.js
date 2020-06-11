@@ -1,3 +1,7 @@
+import {
+    sum, sub, mult, div
+} from './mathUtils.js'; 
+
 const addButton = document.getElementById('add-button');
 addButton.addEventListener('click', () => {
     const add1 = document.getElementById('add1');
@@ -6,9 +10,9 @@ addButton.addEventListener('click', () => {
 
     const firstValue = Number (add1.value);
     const secondValue = Number (add2.value);
-    const sum = firstValue + secondValue;
+    const result = sum(firstValue, secondValue);
 
-    resultSpan.textContent = sum;
+    resultSpan.textContent = result;
 }); 
 
 const subButton = document.getElementById('sub-button');
@@ -21,10 +25,10 @@ subButton.addEventListener('click', () => {
     console.log(sub2.value);
     const firstValue = Number (sub1.value);
     const secondValue = Number (sub2.value);
-    const sub = firstValue - secondValue;
+    const result = sub(firstValue, secondValue);
 
     console.log(sub);
-    resultSpan.textContent = sub;
+    resultSpan.textContent = result;
 });
 
 const multButton = document.getElementById('mult-button');
@@ -37,10 +41,10 @@ multButton.addEventListener('click', () => {
     console.log(mult2.value);
     const firstValue = Number (mult1.value);
     const secondValue = Number (mult2.value);
-    const mult = firstValue * secondValue;
+    const result = mult(firstValue, secondValue);
 
     console.log(mult);
-    resultSpan.textContent = mult;
+    resultSpan.textContent = result;
 });
 
 const divButton = document.getElementById('divide-button');
@@ -51,7 +55,7 @@ divButton.addEventListener('click', () => {
 
     const firstValue = Number (div1.value);
     const secondValue = Number (div2.value);
-    const div = firstValue / secondValue;
+    const result = div(firstValue, secondValue);
 
-    resultSpan.textContent = div;
+    resultSpan.textContent = result;
 }); 

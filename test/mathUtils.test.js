@@ -1,18 +1,48 @@
-// IMPORT MODULES under test here:
-// import example from '../src/example.js';
+import { sum, sub, mult, div } from '../mathUtils.js';
 
 const test = QUnit.test;
 
-test('time to test a function', function(expect) {
-    //Arrange
-    // Set up your parameters and expectations
-    const expected = true;
-    
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = false;
+test('test our add function', function(expect) {
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.equal(expected, actual);
+    const firstValue = 2;
+    const secondValue = 4;  
+    const expected = 6;
+
+    const result = sum(firstValue, secondValue);
+
+    expect.equal(expected, result);
+});
+
+test ('test our sub function', function(expect) {
+
+    const firstValue = 4;
+    const secondValue = 2;
+    const expected = 2;
+
+    const result = sub(firstValue, secondValue);
+
+    expect.equal(expected, result);
+}); 
+
+test ('test our mult function', function(expect){
+
+    const firstValue = 4;
+    const secondValue = 2;
+    const expected = 8;
+
+    const result = mult(firstValue, secondValue);
+
+    expect.equal(expected, result);
+});
+
+test ('test our dev function', function(expect){
+
+    const firstValue = 4;
+    const secondValue = 2;
+    const expected = 2;
+
+    const result = div(firstValue, secondValue);
+    
+    expect.equal(expected, result);
+
 });
